@@ -1,37 +1,148 @@
 
+# ==================================================
+# YT Downloader - Git Ignore
+# Android Native | Kotlin | Jetpack Compose
+# ==================================================
+
+
+# --------------------------------------------------
 # Gradle
+# --------------------------------------------------
+
 .gradle/
-build/
+**/build/
 .kotlin/
 
-# Local configuration
-local.properties
+# Gradle local state
+.gradletasknamecache
+.gradle-build/
 
-# Android Studio / IntelliJ
-.idea/
+
+# --------------------------------------------------
+# Android Studio / IntelliJ IDEA
+# --------------------------------------------------
+
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetDropDown.xml
+.idea/render.experimental.xml
+
 *.iml
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
 
-# Android build outputs
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
+
+# --------------------------------------------------
+# Local SDK & Environment
+# --------------------------------------------------
+
+local.properties
+.env
+.env.*
+!.env.example
+
+# Local secrets and credentials
+secrets.properties
+keystore.properties
+
+
+# --------------------------------------------------
+# Android Build Outputs
+# --------------------------------------------------
+
 *.apk
+*.aab
+*.ap_
 output-metadata.json
 
-# macOS / Logs
-.DS_Store
-*.log
+# Android profiling
+*.hprof
+*.jfr
 
-# Keystore files
+
+# --------------------------------------------------
+# Signing Keys & Certificates
+# --------------------------------------------------
+
 *.jks
 *.keystore
+*.p12
+*.pfx
+*.pem
+*.key
 
+
+# --------------------------------------------------
+# Native Build
+# --------------------------------------------------
+
+.externalNativeBuild/
+.cxx/
+
+
+# --------------------------------------------------
+# Kotlin
+# --------------------------------------------------
+
+*.kotlin_module
+
+
+# --------------------------------------------------
+# Android Generated Files
+# --------------------------------------------------
+
+captures/
+.navigation/
+
+
+# --------------------------------------------------
+# Logs & Temporary Files
+# --------------------------------------------------
+
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Crash reports
+hs_err_pid*
+replay_pid*
+
+
+# --------------------------------------------------
 # Google Services
+# --------------------------------------------------
+
 google-services.json
 
-# Android Profiling
-*.hprof
+
+# --------------------------------------------------
+# Operating Systems
+# --------------------------------------------------
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+.directory
+
+
+# --------------------------------------------------
+# Backup Files
+# --------------------------------------------------
+
+*.bak
+*.old
+*.orig
